@@ -15,4 +15,16 @@
  */
  @import "bootstrap-sprockets";
  @import "bootstrap";
- body {padding-top: 70px;}
+ body {
+   padding-top: 70px;
+ }
+ .jumbotron {
+   font-family: "Comic Sans MS", cursive, sans-serif;
+ border: solid black 2px;
+ }
+ .panel-title {color: black;
+ }
+ .panel-heading{
+ border: solid black 2px
+ }
+ .panel{ border: solid black 2px;}
