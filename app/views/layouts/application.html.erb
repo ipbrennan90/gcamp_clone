@@ -7,8 +7,29 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+
+
+      <a class="navbar-brand" href="#">gCamp</a>
+
+  </nav>
+
+
 
 <%= yield %>
 
+<HR color="black" width=100%>
+<footer>
+      <p><%= link_to("Terms",terms_path) %> | <%= link_to("About",about_path) %></p>
+
+      <%=link_to(image_tag("galvanize.png", class:"link_image"), "https://students.gschool.it/students/282")%>
+      <%=link_to(image_tag("Twitter.png", class:"link_image"), "https://twitter.com/brennanator90")%>
+      <%=link_to(image_tag("Github.png", class:"link_image"), "https://github.com/ipbrennan90")%>
+      <%=link_to(image_tag("linked_in.jpg", class:"link_image"), "https://www.linkedin.com/pub/ian-brennan/46/256/81b")%>
+</footer>
+
+
+
 </body>
+
 </html>
