@@ -15,11 +15,14 @@
  */
  @import "bootstrap-sprockets";
  @import "bootstrap";
+ *{
+   font-family: "Courier New", Courier, monospace, cursive, sans-serif;
+ }
  body {
    padding-top: 70px;
  }
  .jumbotron {
-   font-family: "Comic Sans MS", cursive, sans-serif;
+
    border: solid black 2px;
  }
  .panel-title {
@@ -32,6 +35,6 @@
    border: solid black 2px;
  }
  .link_image{
-   width: 3%;
+   width: 30px;
    float: right;
  }
