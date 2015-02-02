@@ -3,5 +3,10 @@
     <h1>Frequently Asked Questions</h1>
   </div>
 
-  <%=@quote%>
+  <div class ="
+  <% @quote.each do |k|%>
+  <%=  k[:question] %>
+  <%=  k[:question]%>
+  <%=  k[:answer]%>
+  <%end%>
 </div>
