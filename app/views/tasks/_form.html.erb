@@ -1,22 +1,23 @@
-<div class= "container">
-  <%= form_for @task, html: {class: "form-horizontal"} do |f| %>
 
+<%= form_for @task, html: {class: "form-horizontal"} do |f|  %>
 
-    <div class = "form group">
-      <div class "col-md-4">
+    <form class="form-horizontal">
+    <div class="form-group">
+      <div class="col-sm-2 control-label">
         <%= f.label :description %>
       </div>
-      <div class "col-md-4">
-        <%= f.text_field :description %>
+      <div class="col-sm-4">
+          <%= f.text_field :description, class: "form-control" %>
       </div>
-        <%= f.submit %>
-
-
-
     </div>
 
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <%= f.submit class: "btn btn-primary" %>
+        <%= link_to 'Cancel', tasks_path, class: "btn btn-default" %>
+      </div>
+    </div>
 
+    
 
-  <% end %>
-
-</div>
+<% end %>

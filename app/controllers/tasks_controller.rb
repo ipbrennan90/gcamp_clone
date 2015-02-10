@@ -12,7 +12,7 @@ class TasksController < ApplicationController
   def create
    @task = Task.new(task_params)
    if @task.save
-     flash[:success]= "wahtever"
+     flash[:success]= 'Task has been created'
      redirect_to task_path(@task)
    else
      render :new
@@ -20,9 +20,9 @@ class TasksController < ApplicationController
   end
 
   def edit
+  end
 
-
-
+  def show
   end
 
   def update
@@ -35,8 +35,8 @@ class TasksController < ApplicationController
   end
 
   def destroy
-    task= Task.find(params[:id])
-    task.destroy
+
+    @task.destroy
     redirect_to tasks_path
   end
 

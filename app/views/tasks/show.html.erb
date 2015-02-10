@@ -1,2 +1,15 @@
-<%= flash[:success] %>
-<%= @task.description %>
+<%if flash[:success] %>
+  <div class= "alert alert-success text-center"> <%= flash[:success] %></div>
+<% end %>
+
+
+<h1 class="page-header"> <%= @task.description %>
+   <div class= "pull-right">
+     <button class= "btn btn-info">
+       <%= link_to 'Edit', edit_task_path(@task) %>
+      </button>
+    </div>
+</h1>
+<ol class = "breadcrumb">
+  <li> <%= link_to "Tasks" %> > <%= @task.description %></li>
+</ol>
