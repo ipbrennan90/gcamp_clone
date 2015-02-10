@@ -12,13 +12,16 @@ class TasksController < ApplicationController
   def create
    @task = Task.new(task_params)
    if @task.save
-     redirect_to task_path(@task), notice: "wahtever"
+     flash[:success]= "wahtever"
+     redirect_to task_path(@task)
    else
-     render: new
+     render :new
    end
   end
 
   def edit
+
+
 
   end
 

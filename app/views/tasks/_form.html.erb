@@ -1,1 +1,22 @@
-git@github.com:ipbrennan90/g4-crud-week4.git
+<div class= "container">
+  <%= form_for @task, html: {class: "form-horizontal"} do |f| %>
+
+
+    <div class = "form group">
+      <div class "col-md-4">
+        <%= f.label :description %>
+      </div>
+      <div class "col-md-4">
+        <%= f.text_field :description %>
+      </div>
+        <%= f.submit %>
+
+
+
+    </div>
+
+
+
+  <% end %>
+
+</div>

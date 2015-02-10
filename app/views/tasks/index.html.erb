@@ -4,6 +4,7 @@
 
   <h3> Description </h3>
   <%= t.description %>
+  <%= link_to 'Show', task_path(t) %>
   <%= link_to 'Delete', task_path(t), method: :delete, data: {confirm: 'Really? for reals?'}%>
   <%= link_to 'Edit', edit_task_path(t) %>
 
