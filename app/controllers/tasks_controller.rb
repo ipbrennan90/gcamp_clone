@@ -8,9 +8,14 @@ class TasksController < ApplicationController
     @task= Task.new
   end
 
+
   def create
-    Task.create(task_params)
-    redirect_to tasks_path
+   @task = Task.new(task_params)
+   if @task.save
+     redirect_to task_path(@task), notice: "wahtever"
+   else
+     render: new
+   end
   end
 
   def edit
@@ -18,8 +23,9 @@ class TasksController < ApplicationController
   end
 
   def update
-    if @task.update(blog_post_params)
-      redirect_to @task, notice: 'Task was successfully updated.'
+    if @task.update(task_params)
+      flash[:success]='Task was successfully updated.'
+      redirect_to @task
     else
       render :edit
     end
