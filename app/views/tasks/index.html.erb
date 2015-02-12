@@ -28,7 +28,9 @@
           <% end %>
         </td>
         <td>
-          <%= t.due_date.strftime("%m/%d/%Y") %>  
+          <% if t.due_date %>
+            <%= t.due_date.strftime("%m/%d/%Y") %>
+          <% end %>
         </td>
         <td>
           <div class = "pull-right">
