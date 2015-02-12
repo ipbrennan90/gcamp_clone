@@ -16,23 +16,20 @@
       </tr>
     </thead>
     <tbody>
-    <% @tasks.each do |t| %>
-
-
-    <tr>
-      <td> <%=link_to t.description, task_path(t) %>
-      <div class = "pull-right">
-        <%= link_to 'Edit', edit_task_path(t), class: "btn btn-info" %>
-        <%= link_to 'Delete', task_path(t), method: :delete,class: "btn btn-danger"%>
-      </div>
-      </td>
-    </tr>
+      <% @tasks.each do |t| %>
+      <tr>
+        <td>
+          <% if t.completed %>
+            <s><%=link_to t.description, task_path(t) %></s>
+          <% else %>
+            <%=link_to t.description, task_path(t) %>
+          <% end %>
+          <div class = "pull-right">
+            <%= link_to 'Edit', edit_task_path(t), class: "btn btn-info" %>
+            <%= link_to 'Delete', task_path(t), method: :delete,class: "btn btn-danger"%>
+          </div>
+        </td>
+      </tr>
+      <% end %>
     </tbody>
   </table>
-
-
-
-
-
-
-  <% end %>
