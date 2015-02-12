@@ -27,6 +27,7 @@ class TasksController < ApplicationController
 
   def update
     if @task.update(task_params)
+      @task.completed=false
       flash[:success]='Task was successfully updated.'
       redirect_to @task
     else

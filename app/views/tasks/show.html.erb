@@ -4,7 +4,7 @@
 
 
   <h1 class="page-header">
-    <%if @task[:completed]==true then %>
+    <%if @task.completed==true then %>
       <s><%= @task.description %></s>
     <% else %>
       <%= @task.description %>
