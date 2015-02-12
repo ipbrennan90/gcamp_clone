@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'about', to: 'about#index'
   get 'faq', to: 'faq#index'
   resources :tasks
+  resources :users
 
 
   # Example of regular route:
