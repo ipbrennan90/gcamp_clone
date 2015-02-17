@@ -23,12 +23,19 @@
 
         <tr>
           <td>
-            <%=u.first_name+" "+u.last_name %>
+            <%=link_to u.first_name+" "+u.last_name, user_path(u) %>
           </td>
           <td>
             <%= mail_to u.email %>
           </td>
-        </tr>
+
+          <td>
+            <div class = "pull-right">
+              <%= link_to 'Edit', edit_user_path(u) %>
+            </div>
+          </td>
+
+      </tr>
 
 
       <% end %>

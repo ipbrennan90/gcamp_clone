@@ -1,6 +1,4 @@
-  <div class= "page-header">
-    <h1> New User </h1>
-  </div>
+
   <%= form_for @user, html: {class: "form-horizontal"} do |u| %>
 
   <div class = "form-group">
@@ -35,6 +33,10 @@
     <div class="col-sm-offset-2 col-sm-10">
       <%= u.submit class: "btn btn-primary" %>
       <%= link_to 'Cancel', users_path, class: "btn btn-default" %>
+      <%if params[:action] == "edit" %>
+        <%= link_to "Delete", user_path(@user), method: :delete, class: "btn btn-danger" %>
+      <%else %>
+      <% end %>
     </div>
   </div>
 

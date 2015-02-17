@@ -1,1 +1,8 @@
-<h1> HELLO IAN! </h1>
+<h1 class: "page-header"> <%= @user.first_name+" "+@user.last_name %> </h1>
+
+<p> <%= @user.email %> </p>
+
+<div class: "pull-left">
+  <%= link_to "Edit", edit_user_path(@user), class: "btn btn-info" %>
+  <%= link_to "Back", users_path, class: "btn btn-default"%>
+</div>
