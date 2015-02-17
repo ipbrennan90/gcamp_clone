@@ -35,7 +35,6 @@
       <%= link_to 'Cancel', users_path, class: "btn btn-default" %>
       <%if params[:action] == "edit" %>
         <%= link_to "Delete", user_path(@user), method: :delete, class: "btn btn-danger" %>
-      <%else %>
       <% end %>
     </div>
   </div>
