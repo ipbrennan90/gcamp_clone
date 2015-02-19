@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get 'faq', to: 'faq#index'
   resources :tasks
   resources :users
+  resources :projects
 
 
   # Example of regular route:

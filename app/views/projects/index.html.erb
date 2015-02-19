@@ -1,0 +1,25 @@
+<% if flash[:success]  %>
+  <div class = "alert alert-success ">
+    <%= flash[:success] %>
+  </div>
+<% end %>
+<h1 class = "page-header">
+  Projects
+  <div class="pull-right">
+    <%= link_to "New Project", new_project_path, class: "btn btn-info" %>
+  </div>
+</h1>
+
+
+
+
+<table class = "table">
+  <thead>
+    <th>Name</th>
+  </thead>
+  <% @projects.each do |r| %>
+  <tr>
+    <td> <%= link_to r.name, project_path(r) %> </td>
+  </tr>
+  <% end %>
+</table>
